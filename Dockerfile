@@ -30,7 +30,7 @@ RUN mkdir /var/www/sso && chown www-data: /var/www/sso -R && \
     chmod 0755 /var/www/sso -R
 	
 COPY ./config/sso.conf /etc/apache2/sites-available/sso.conf
-RUN mkdir -p /var/www/parking/current
+RUN mkdir -p /var/www/sso/current
 
 RUN a2ensite sso.conf && a2dissite 000-default.conf && a2enmod rewrite
 
