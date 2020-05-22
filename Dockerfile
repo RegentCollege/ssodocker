@@ -32,7 +32,7 @@ RUN mkdir /var/www/sso && chown www-data: /var/www/sso -R && \
 COPY ./config/sso.conf /etc/apache2/sites-available/sso.conf
 RUN mkdir -p /var/www/sso/current
 
-RUN a2ensite sso.conf && a2dissite 000-default.conf && a2enmod rewrite
+RUN a2ensite sso.conf && a2dissite 000-default.conf && a2enmod rewrite && a2enmod cgid
 
 WORKDIR /var/www/sso
 
