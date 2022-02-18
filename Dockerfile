@@ -1,4 +1,4 @@
-FROM php:7-apache
+FROM php:8-apache
 MAINTAINER codyrigg
 
 RUN apt-get update && \
